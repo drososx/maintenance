@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "maintenance"
+dynamic = ["version"]
+description = "Minimal Python project scaffold for maintenance."
+readme = "README.md"
+requires-python = ">=3.12"
+
+[tool.setuptools.packages.find]
+include = ["maintenance*"]
+
+[tool.setuptools.dynamic]
+version = {attr = "maintenance.__version__"}
